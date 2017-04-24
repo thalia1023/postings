@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class PostingControllerTest < ActionController::TestCase
+class PostingTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

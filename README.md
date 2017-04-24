@@ -1,24 +1,39 @@
+ # README
+ 
+ #Model
+ 
+ 1. Users
+   -Relationships
+     has_many :Postings
+     has_many :Comments
+   -Elements
+     email / password
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+ 2. Postings
+   -Relationships
+     belongs_to :User
+     has_many : Comments
+   -Elements
+     title, body, user_id
 
+ 3. Comments
+   -Relationships
+     belongs_to :Users
+     belongs_to :Postings
+   -Elements
+     content, user_id, posting_id
 
-Welcome to your Rails project on Cloud9 IDE!
+------------------------------------
 
-To get started, just do the following:
+# Controllers / Views
 
-1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
-2. Preview your new app by clicking on the URL that appears in the Run panel below (https://posting-prac1-thalia98.c9users.io/).
+posting controller
 
-Happy coding!
-The Cloud9 IDE team
+comment controller
 
+User => devise gemfile
 
-## Support & Documentation
+------------------------------------
 
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+# css / JS : Bootsrap CDN
+
