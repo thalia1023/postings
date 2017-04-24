@@ -1,6 +1,6 @@
 <h1>All posts</h1>
 
-<form>
+<form href="postings/create" method="POST">
   <div class="form-group">
     <label for="title">Title</label>
     <input type="title" class="form-control" name="title" id="title">
@@ -14,6 +14,9 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
-
+<% @all_postings.each do |p| %>
+  <h2>Title: <%= p.title %></h2>
+  <p><%= p.body %></p>
+<% end %>
 
 
